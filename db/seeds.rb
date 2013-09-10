@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+kevin = Person.create( { first_name: "Kevin", last_name: "VanderLugt", phone: "111-222-3333"})
+kevin.addresses.create( { street_address: "111 No My Address", city: "Seattle", state:"WA", zip: 11223} )
