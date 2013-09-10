@@ -1,2 +1,9 @@
-<h1>Persons#index</h1>
-<p>Find me in app/views/persons/index.html.erb</p>
+<h1>Contacts:</h1>
+
+<ul>
+  <% @people.each do |person| %>
+    <li>
+      <h4><%= person.full_name %></h4>
+    </li>
+  <% end %>
+</ul>

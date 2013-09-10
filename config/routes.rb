@@ -1,8 +1,5 @@
 CfAddressList::Application.routes.draw do
-  get "persons/index"
-  get "persons/show"
-  get "persons/new"
-  get "persons/edit"
+  resources :person
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -43,7 +40,7 @@ CfAddressList::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
