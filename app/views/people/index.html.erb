@@ -1,20 +1,10 @@
+<%= link_to "Add new contact", new_person_path %>
 <h1>Contacts:</h1>
 
 <ul>
   <% @people.each do |person| %>
-    <li>
-      <h3><%= person.full_name %></h4>
-      <h4>Addresses:</h4>
-      <ul>
-        <% person.addresses.each do |address| %>
-          <%= render partial: 'address/address',
-                      object: address %>
-          <!-- <li>
-            <%= address.street_address %><br>
-            <%= address.city_address %>
-          </li> -->
-        <% end %>
-      </ul>
-    </li>
+  <li>
+    <%= render person %>
+  </li>
   <% end %>
 </ul>

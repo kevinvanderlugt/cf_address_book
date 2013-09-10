@@ -1,0 +1,13 @@
+<%= person.full_name %><br>
+Addresses:<br>
+<ul>
+  <% person.addresses.each do |address| %>
+    <li>
+      <%= render partial: 'address/address',
+                  object: address %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Edit", edit_person_path(person) %>  |
+<%= link_to "Delete", person, method: :delete %>
