@@ -1,4 +1,8 @@
 CfAddressList::Application.routes.draw do
+  get "persons/index"
+  get "persons/show"
+  get "persons/new"
+  get "persons/edit"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
