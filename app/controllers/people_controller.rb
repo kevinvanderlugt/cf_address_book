@@ -10,6 +10,7 @@ class PeopleController < ApplicationController
 
   def new
     @person = Person.new
+    @person.addresses.build
   end
 
   def edit
@@ -51,6 +52,12 @@ class PeopleController < ApplicationController
     end
 
     def person_params
-      params.require(:person).permit(:first_name, :last_name)
+      params.require(:person).permit(:first_name, :last_name,
+                                      addresses_attributes: [
+                                        :street_address,
+                                        :city,
+                                        :state,
+                                        :zip,
+                                        :id ])
     end
 end
