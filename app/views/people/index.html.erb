@@ -3,7 +3,18 @@
 <ul>
   <% @people.each do |person| %>
     <li>
-      <h4><%= person.full_name %></h4>
+      <h3><%= person.full_name %></h4>
+      <h4>Addresses:</h4>
+      <ul>
+        <% person.addresses.each do |address| %>
+          <%= render partial: 'address/address',
+                      object: address %>
+          <!-- <li>
+            <%= address.street_address %><br>
+            <%= address.city_address %>
+          </li> -->
+        <% end %>
+      </ul>
     </li>
   <% end %>
 </ul>
