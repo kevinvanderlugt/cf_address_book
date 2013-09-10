@@ -14,6 +14,15 @@ class PeopleController < ApplicationController
   def edit
   end
 
+  def destroy
+    if @person.destroy
+      flash[:success] = "Person deleted"
+    else
+      flash[:error] = "Unable to delete person"
+    end
+    redirect_to people_url
+  end
+
   private
     def find_person
       @person = Person.find(params[:id])
